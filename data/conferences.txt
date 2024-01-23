@@ -1,0 +1,1 @@
+{"1408_m": "Men's MIAC", "1408_f": "Women's MIAC", "1420_m": "Men's WIAC", "1420_f": "Women's WIAC", "65_m": "Men's Big Ten", "65_f": "Women's Big Ten", "55_m": "Men's Ivy League", "55_f": "Women's Ivy League"}

@@ -1,0 +1,75 @@
+body {
+    margin:40px;
+    margin-left: 140px;
+}
+
+p {
+    margin: 0px;
+    padding: 10px;
+}
+
+td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 70px;
+}
+
+.results_table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    /*padding-right: 30px;*/
+}
+
+.default_text {
+    font-size: 170%;
+}
+
+.title {
+    font-size: 500%;
+    color: black;
+    text-indent: 100px;
+}
+
+.subtitle {
+    font-size: 300%;
+    color: black;
+}
+
+.center_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.right_text {
+    text-align: right;
+}
+
+.thick_line {
+    height: 3px;
+    background-color: black;
+}
+
+#half_block {
+    width: 50%;
+    float: left;
+}
+
+#one_third_block {
+    width: 33%;
+    float: left;
+}
+
+#two_thirds_block {
+    width: 67%;
+    float: left;
+}

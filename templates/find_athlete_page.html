@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find Athlete</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/general.css">
+        <script type="text/javascript" src="../static/find_athlete_page.js"></script>
+    </head>
+
+    <body>
+
+        <p><a href = "/">Home</a></p>
+
+        <div id = "half_block">
+            <h4 class="default_text">Enter an athlete</h4>
+
+
+            
+            <p>Athlete Name: <input id="athlete_name"></input></p>
+            <p>Athlete Conference: <select id="athlete_conference_selector"></select></p>
+            <p>Comparison Conference: <select id="comparison_conference_selector"></select></p>
+            <p><button id="find_athlete_button">Find Athlete</button></p>
+            <br><br>
+            <p><table id="athletes_table" class="results_table"></table></p>
+
+        </div>
+
+        <div id = "half_block" class="default_text">
+            <h4 id="error_message"></h4>
+        </div>
+
+
+    </body>
+</html>
