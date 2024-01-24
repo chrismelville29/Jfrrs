@@ -89,7 +89,7 @@ def find_neighbors(tar_athlete, conference_id):
     if(tar_athlete['name'] != neighbors[0]['name']):
         neighbors.insert(0, tar_athlete)
     for neighbor in neighbors:
-        neighbor['distance'] = new_similarity(neighbor, tar_athlete, means, std_devs)
+        neighbor['similarity'] = new_similarity(neighbor, tar_athlete, means, std_devs)
         weights = pr_weights(neighbor['relevant_prs'], means, std_devs)
         neighbor['colors'] = event_colors(weights)
     return neighbors

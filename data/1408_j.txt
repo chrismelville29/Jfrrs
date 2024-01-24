@@ -1,0 +1,1 @@
+{"name": "MIAC", "id": "1408_j", "athletes": [], "stats": {"means": {"800": NaN, "1000": NaN, "1500": NaN, "MILE": NaN, "3000": NaN, "5000": NaN, "10,000": NaN, "3000S": NaN}, "std_devs": {"800": NaN, "1000": NaN, "1500": NaN, "MILE": NaN, "3000": NaN, "5000": NaN, "10,000": NaN, "3000S": NaN}}}

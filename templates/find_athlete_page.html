@@ -11,22 +11,31 @@
 
         <p><a href = "/">Home</a></p>
 
-        <div id = "half_block">
-            <h4 class="default_text">Enter an athlete</h4>
+        <div id = "one_third_block">
+
+            <h6 class="default_text">Find Athlete</h4>
 
 
-            
-            <p>Athlete Name: <input id="athlete_name"></input></p>
             <p>Athlete Conference: <select id="athlete_conference_selector"></select></p>
+            <p>Athlete Name: <input id="athlete_name"></input></p>
+            <br>
             <p>Comparison Conference: <select id="comparison_conference_selector"></select></p>
+            <br>
             <p><button id="find_athlete_button">Find Athlete</button></p>
             <br><br>
             <p><table id="athletes_table" class="results_table"></table></p>
+            
+            <p>Note about the shades of green used in table: <br>
+            They are meant to show weights, not provide contrast. If two cells are the same shade of green, it means 
+            they have the same weight. The greener cell, the better the time and the higher the weight.</p>
+        
 
         </div>
 
-        <div id = "half_block" class="default_text">
+        <div id = "two_thirds_block" class="default_text">
+            
             <h4 id="error_message"></h4>
+            
         </div>
 
 

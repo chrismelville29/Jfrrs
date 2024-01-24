@@ -23,6 +23,7 @@ ul {
 .results_table {
     border: 2px solid black;
     border-collapse: collapse;
+
     /*padding-right: 30px;*/
 }
 

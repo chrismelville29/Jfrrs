@@ -35,6 +35,7 @@ import csv
 import json
 import concurrent.futures
 import numpy
+import argparse
 
 relevant_distances = ['800','1000','1500','MILE','3000','5000','10,000','3000S']
 
@@ -246,24 +247,41 @@ def update_conferences(id, name, sex):
 
 def write_conference(id, sex):
     with open('data/'+id+'_'+sex+'.txt', 'w') as file:
-        conference = Conference(id, sex)
-        file.write(json.dumps(conference.get_json()))
-        update_conferences(id, conference.get_name(), sex)
+        try:
+            conference = Conference(id, sex)
+            file.write(json.dumps(conference.get_json()))
+            update_conferences(id, conference.get_name(), sex)
+        except:
+            print("Error occurred, could not write conference. ")
+
+def write_base_conferences():
+    #miac
+    write_conference('1408','m')
+    write_conference('1408','f')
+
+    #wiac
+    write_conference('1420','m')  
+    write_conference('1420','f')
+
+    #big 10
+    write_conference('65','m')   
+    write_conference('65','f')
+
+    #ivy league
+    write_conference('55','m')
+    write_conference('55','f')
 
 
 
-#miac
-#write_conference('1408','m')
-#write_conference('1408','f')
-
-#wiac
-#write_conference('1420','m')  
-#write_conference('1420','f')
-
-#big 10
-#write_conference('65','m')   
-#write_conference('65','f')
-
-#ivy league
-#write_conference('55','m')
-#write_conference('55','f')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser('Tfrrs scraper')
+    parser.add_argument('conference_id', help='id of the conference you want to scrape')
+    parser.add_argument('sex', help='m or f')
+    arguments = parser.parse_args()
+    if arguments.conference_id == 'base' and arguments.sex == 'j':
+        write_base_conferences()
+    else:
+        if arguments.sex != 'm' and arguments.sex != 'f':
+            print("sex must be either m or f")
+        else:
+            write_conference(arguments.conference_id, arguments.sex)

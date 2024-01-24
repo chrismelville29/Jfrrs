@@ -57,7 +57,7 @@ function createHeaderHTML(rlvtKeys) {
 }
 
 function createAthleteHTML(athlete) {
-    let rowHTML = '<td>'+athlete['distance'].toFixed(2)+'</td><td>'+athlete['name']+'</td><td>'+athlete['team']+'</td>';
+    let rowHTML = '<td>'+athlete['similarity'].toFixed(2)+'</td><td>'+athlete['name']+'</td><td>'+athlete['team']+'</td>';
     let prs = athlete['relevant_prs'];
     let colors = athlete['colors'];
     for(const event of Object.keys(prs)) {
