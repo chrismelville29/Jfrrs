@@ -6,13 +6,14 @@ from the chosen conference are most similar to the selected athlete.
 
 ## To run program
 
-- Run "python3 app.py localhost 5001" into command line then go to "localhost:5001" in a browser.
+- Run "python3 app.py localhost 5001" in the command line then go to "localhost:5001" in a browser.
 
 ## To add new conference
 
 - Navigate to the tfrrs page of the conference you want to add
-- The url of the page should look like "https://www.tfrrs.org/leagues/####.html", with the #### being the conference id
-- Run "python3 scraper.py #### m" to add the men's side of the conference and "python3 scraper.py #### f" for the women's.
+- The url of the page should look like "https://www.tfrrs.org/leagues/1408.html", (1408 is a placeholder in this case,
+the actual value will be the conference id of your conference)
+- Run "python3 scraper.py 1408 m" to add the men's side of the conference and "python3 scraper.py 1408 f" for the women's.
 
 ## Similarity Methodology
 On the athlete comparison page, there is a "similarity" column. Here is an explanation of how that is calculated.
