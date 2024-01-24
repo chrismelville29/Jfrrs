@@ -66,6 +66,8 @@ class Conference:
 
     def find_name(self):
         conference_tag = get_attr_tags(self.url, 'h3', {'class':'panel-title'})[0]
+        if conference_tag.text == "Not Found (404)":
+            raise RuntimeError("could not find conference")
         return conference_tag.text
 
     def create_team(self, team_id, team_tag, athletes):
@@ -246,13 +248,14 @@ def update_conferences(id, name, sex):
         file.write(json.dumps(conferences))
 
 def write_conference(id, sex):
+    try:
+        conference = Conference(id, sex)
+    except RuntimeError:
+        print("could not create conference object. check id validity")
+        return
     with open('data/'+id+'_'+sex+'.txt', 'w') as file:
-        try:
-            conference = Conference(id, sex)
-            file.write(json.dumps(conference.get_json()))
-            update_conferences(id, conference.get_name(), sex)
-        except:
-            print("Error occurred, could not write conference. ")
+        file.write(json.dumps(conference.get_json()))
+        update_conferences(id, conference.get_name(), sex)
 
 def write_base_conferences():
     #miac
