@@ -123,7 +123,7 @@ class Team:
         athletes.append(athlete)
 
     def create_athletes(self):
-        roster_tag = get_text_tags('https://www.tfrrs.org/teams/'+self.id, 'h3', 'ROSTER')[0]
+        roster_tag = get_text_tags('https://www.tfrrs.org/teams/tf/'+self.id, 'h3', 'ROSTER')[0]
         roster = roster_tag.next_sibling.next_sibling.contents[3].contents
         roster_length = len(roster)
         athletes = []

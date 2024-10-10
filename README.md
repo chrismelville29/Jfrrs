@@ -23,7 +23,7 @@ On the athlete comparison page, there is a "similarity" column. Here is an expla
     - We can start off with $s(x_v, y_v) = exp(-|x_v-y_v|)$.
     - To standardize across events, we define $s(x_v, y_v) = exp(-\frac{|x_v-y_v|}{\sigma_v})$.
     - Handily, this stays between $0$ and $1$, with $1$ meaning perfect similarity.
-- Next, we define the set of all events $x$ and $y$ have both run as $V^{xy}$.
+- Next, we define the set of all events $x$ and $y$ have both run as $V_{xy}$.
 - Averaging all of the $s(x_v, y_v)$ in $V_{xy}$ gives us $S(x, y) = \frac{1}{|V_{xy}|}\sum\limits_{v \in V_{xy}} s(x_v, y_v)$.
 - This is a good start, but we would like to judge athletes on their best events.
     - We want $w_v(x, V)$ to be the weight we give event $v$ in some events $V$ run by athlete $x$.
